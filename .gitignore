@@ -1,0 +1,55 @@
+# Build
+build/
+build_ext/
+dist/
+out/
+cmake-build-*/
+*.egg-info/
+*.so
+*.pyd
+*.dll
+*.lib
+*.exp
+*.obj
+*.o
+*.a
+*.pdb
+*.ilk
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg
+
+# Profiling / plots generated locally
+profiling/ncu/*.ncu-rep
+profiling/nsys/*.nsys-rep
+profiling/ncu/*.csv
+profiling/nsys/*.qdrep
+plots/*.png
+plots/*.svg
+benchmarks/results/
+*.jsonl
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+
+# CUDA
+*.i
+*.ii
+*.ptx
+*.cubin
+*.fatbin
+*.cu.cpp
+
+# OS
+.DS_Store
+Thumbs.db

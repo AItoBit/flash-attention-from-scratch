@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel", "torch"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flash-attention-from-scratch"
+version = "0.1.0"
+description = "Progressive CUDA optimization laboratory for exact scaled dot-product attention."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [{ name = "flash-attention-from-scratch" }]
+dependencies = ["torch>=2.1", "numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "matplotlib>=3.7", "tabulate>=0.9"]
+triton = ["triton>=2.1"]
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["python"]
+addopts = "-ra --tb=short"
+filterwarnings = ["ignore::DeprecationWarning"]
